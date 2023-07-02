@@ -1,0 +1,3 @@
+include ':OkLiveDataBus'
+include ':app'
+rootProject.name = "JetPackDemo"
