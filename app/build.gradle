@@ -22,8 +22,12 @@ android {
         }
     }
 
-    // 启用 ViewBinding，
-    viewBinding {
+//    // 启用 ViewBinding，
+//    viewBinding {
+//        enabled true
+//    }
+
+    dataBinding {
         enabled true
     }
 
