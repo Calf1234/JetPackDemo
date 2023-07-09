@@ -1,3 +1,4 @@
+include ':project1'
 include ':OkLiveDataBus'
 include ':app'
 rootProject.name = "JetPackDemo"

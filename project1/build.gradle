@@ -1,18 +1,18 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-
 
 android {
     compileSdkVersion 30
     buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId "com.demo.jetpack"
         minSdkVersion 26
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
+
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -22,22 +22,13 @@ android {
         }
     }
 
-//    // 启用 ViewBinding，
-//    viewBinding {
-//        enabled true
-//    }
-
     dataBinding {
         enabled true
-    }
-
-    compileOptions {
-        targetCompatibility JavaVersion.VERSION_1_8
-        sourceCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.1.0'
@@ -61,6 +52,4 @@ dependencies {
 
 
     implementation project(":OkLiveDataBus")
-
-    implementation project(":project1")
 }
