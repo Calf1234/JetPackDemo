@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".viewbinding.MainActivity" />-->
+        <activity android:name=".databinding.MainActivity"></activity>
+        <!-- <activity android:name=".viewbinding.MainActivity" /> -->
         <activity android:name=".livedata.MainActivity2" />
         <activity android:name=".lifecycle.MainActivity" />
-        <activity android:name=".databinding.MainActivity">
+        <activity android:name=".viewmodel.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
