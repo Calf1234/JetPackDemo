@@ -1,24 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:tag="com.apw.project1.MainActivity"
-        tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/phone2_bg"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <!-- 电话号码 -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="main activity"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="center"
+            android:text="@{vm.phoneInfo}"
+            android:textSize="@dimen/activity_phone_tv"
+            android:textStyle="bold" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- 表格布局 -->
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dip">
+
+            <!-- 第一列 -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(1))}"
+                    android:text="@string/phone1"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(2))}"
+                    android:text="@string/phone2"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(3))}"
+                    android:text="@string/phone3"
+                    android:textSize="@dimen/activity_phone_bt" />
+            </TableRow>
+
+            <!-- 第二列 -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(4))}"
+                    android:text="@string/phone4"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(5))}"
+                    android:text="@string/phone5"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(6))}"
+                    android:text="@string/phone6"
+                    android:textSize="@dimen/activity_phone_bt" />
+            </TableRow>
+
+            <!-- 第3列 -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(7))}"
+                    android:text="@string/phone7"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(8))}"
+                    android:text="@string/phone8"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(9))}"
+                    android:text="@string/phone9"
+                    android:textSize="@dimen/activity_phone_bt" />
+            </TableRow>
+
+            <!-- 第4列 -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(@string/phonexin)}"
+                    android:text="@string/phonexin"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(String.valueOf(0))}"
+                    android:text="@string/phone0"
+                    android:textSize="@dimen/activity_phone_bt" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/phone_selector_number"
+                    android:onClick="@{()->vm.appendNumber(@string/phonejin)}"
+                    android:text="@string/phonejin"
+                    android:textSize="@dimen/activity_phone_bt" />
+            </TableRow>
+
+            <!-- 第5列 -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- 清空 -->
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dip"
+                        android:background="@drawable/phone_selector_min"
+                        android:onClick="@{()->vm.clear()}"
+                        android:textSize="@dimen/activity_phone_bt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- 拨打 -->
+                    <ImageView
+                        android:layout_width="46dip"
+                        android:layout_height="46dip"
+                        android:layout_gravity="center"
+                        android:onClick="@{()->vm.callPhone()}"
+                        android:src="@drawable/phone_selector_call" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- 删除一个字符 -->
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/phone_selector_backspace"
+                        android:onClick="@{()->vm.backspaceNumber()}"
+                        android:textSize="@dimen/activity_phone_bt" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
 </layout>
