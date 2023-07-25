@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_path"
+    app:startDestination="@id/frag1">
+
+    <fragment
+        android:id="@+id/frag1"
+        android:name="com.demo.jetpack.nav.Frag1"
+        android:label="fragment_frag1"
+        tools:layout="@layout/fragment_frag1">
+        <action
+            android:id="@+id/action_frag1_to_frag2"
+            app:destination="@id/frag2" />
+        <action
+            android:id="@+id/action_frag1_to_frag3"
+            app:destination="@id/frag3" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag2"
+        android:name="com.demo.jetpack.nav.Frag2"
+        android:label="fragment_frag2"
+        tools:layout="@layout/fragment_frag2">
+        <action
+            android:id="@+id/action_frag2_to_frag4"
+            app:destination="@id/frag4" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag3"
+        android:name="com.demo.jetpack.nav.Frag3"
+        android:label="fragment_frag3"
+        tools:layout="@layout/fragment_frag3"/>
+    <fragment
+        android:id="@+id/frag4"
+        android:name="com.demo.jetpack.nav.Frag4"
+        android:label="fragment_frag4"
+        tools:layout="@layout/fragment_frag4">
+        <action
+            android:id="@+id/action_frag4_to_frag12"
+            app:destination="@id/frag1" />
+    </fragment>
+</navigation>
